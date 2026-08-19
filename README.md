@@ -2,7 +2,16 @@
 
 Isolated Foundry project for `ZiaFeeHook`, a Uniswap v4 dynamic-fee hook intended for Robinhood Chain (chain ID 4663).
 
-Status: candidate code only. It has not been deployed. This README describes behavior and test evidence; it does not assert that a security assessment has been completed.
+Status: deployed and source-verified on Robinhood Chain. This README describes behavior and test evidence; deployment does not itself assert that a security assessment has been completed.
+
+## Robinhood Chain deployment
+
+- Hook: [`0x64E9ae1066c47Ac4a3cc0a5bd7B135908590e088`](https://robinhoodchain.blockscout.com/address/0x64E9ae1066c47Ac4a3cc0a5bd7B135908590e088?tab=contract)
+- Transaction: [`0x67b716512ffd0ce4e2fa9eba76c645d5724c0a572843963b5bd5dfdfaf8b8509`](https://robinhoodchain.blockscout.com/tx/0x67b716512ffd0ce4e2fa9eba76c645d5724c0a572843963b5bd5dfdfaf8b8509)
+- Block: `40,851,447`
+- Permission mask: `0x2088`
+- Source commit deployed: `9c24bf3c547941d1006a6746b6c750be0f5b3cea`
+- Deployment record: `deployments/robinhood-mainnet.json`
 
 ## Canonical dependency
 
@@ -149,6 +158,7 @@ test/ZiaFeeHookFork.t.sol
 test/utils/
 script/MineZiaFeeHookAddress.s.sol
 script/DeployZiaFeeHook.s.sol
+deployments/robinhood-mainnet.json
 DEPENDENCIES.md
 foundry.toml
 remappings.txt
@@ -192,7 +202,7 @@ Verified results for this isolated package:
 | `ZiaFeeHook.sol` coverage | 100% lines (71/71), statements (86/86), branches (21/21), functions (11/11) |
 | Lint | clean |
 | Optimized size | 7,853-byte runtime; 8,905-byte initcode |
-| Deployment-script simulation | passed on a chain-4663 fork; no broadcast |
+| Deployment | successful at the predicted CREATE2 address; source verified on Robinhood Blockscout |
 
 ## CREATE2 mining and deployment script
 
@@ -205,6 +215,6 @@ TREASURY=0x... KEEPER=0x... \
 
 `DeployZiaFeeHook.s.sol` checks chain ID 4663, canonical PoolManager code, CREATE2 factory code, nonzero immutable addresses, and an unused predicted address. Before `startBroadcast`, it reconstructs all 14 flags from `getHookPermissions()` and requires exact equality with both `0x2088` and the predicted address bits. It repeats the permission and address checks after construction.
 
-The script is present for review and simulation. Do not add `--broadcast` until final addresses, dependency revisions, source, compiler settings, and bytecode have been independently approved.
+The script remains available for reproducibility. The production deployment used the constructor values recorded in `deployments/robinhood-mainnet.json`.
 
-No Robinhood Chain transaction has been sent from this project.
+Pool initialization is a separate transaction and is not performed by the deployment script.

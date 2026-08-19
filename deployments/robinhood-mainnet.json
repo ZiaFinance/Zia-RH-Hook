@@ -1,0 +1,53 @@
+{
+  "network": {
+    "name": "Robinhood Chain",
+    "chainId": 4663,
+    "rpc": "https://rpc.mainnet.chain.robinhood.com",
+    "explorer": "https://robinhoodchain.blockscout.com"
+  },
+  "deployment": {
+    "contract": "ZiaFeeHook",
+    "address": "0x64E9ae1066c47Ac4a3cc0a5bd7B135908590e088",
+    "transactionHash": "0x67b716512ffd0ce4e2fa9eba76c645d5724c0a572843963b5bd5dfdfaf8b8509",
+    "blockNumber": 40851447,
+    "blockHash": "0xbacf21626286c52811810d1cd773bbed2efc5e92b4ca2b7c02bc9f614128d81e",
+    "timestamp": "2026-08-19T20:37:25Z",
+    "deployer": "0x4e937Dfb5ef10e3640fC0cbD7dFcFe8155209742",
+    "create2Factory": "0x4e59b44847b379578588920cA78FbF26c0B4956C",
+    "create2Salt": "0x0000000000000000000000000000000000000000000000000000000000000687",
+    "status": 1,
+    "gasUsed": 1767263,
+    "effectiveGasPriceWei": 20050000,
+    "transactionCostWei": "35433623150000"
+  },
+  "constructor": {
+    "poolManager": "0x8366a39CC670B4001A1121B8F6A443A643e40951",
+    "treasury": "0x726AEf283bc276A887c2Db95519570cd17774E67",
+    "keeper": "0xe329342eFe03F928FE820C5039E1B0Ac7889631b"
+  },
+  "hook": {
+    "permissionMask": "0x2088",
+    "beforeInitialize": true,
+    "beforeSwap": true,
+    "beforeSwapReturnDelta": true,
+    "defaultLpFee": 2500,
+    "maximumLpFee": 10000,
+    "defaultHookFeeBps": 5,
+    "maximumHookFeeBps": 25
+  },
+  "artifact": {
+    "sourceCommit": "9c24bf3c547941d1006a6746b6c750be0f5b3cea",
+    "compiler": "0.8.30",
+    "evmVersion": "cancun",
+    "optimizerEnabled": true,
+    "optimizerRuns": 800,
+    "runtimeCodeBytes": 7853,
+    "runtimeCodeHash": "0x717856aadddba96e121bfff0beed391b4c1a01e90ea833e27c8079fd4e681f11",
+    "initCodeHash": "0xdaf66def30a24826b1ecd9245e7bc9b59ee413b5fa9a08a882679336c65b77e6"
+  },
+  "verification": {
+    "provider": "Robinhood Blockscout",
+    "verified": true,
+    "url": "https://robinhoodchain.blockscout.com/address/0x64E9ae1066c47Ac4a3cc0a5bd7B135908590e088?tab=contract"
+  }
+}

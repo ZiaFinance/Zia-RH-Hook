@@ -1,0 +1,26 @@
+# Compiler files
+cache/
+out/
+
+# Deployment receipts are summarized in deployments/.
+/broadcast/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Coverage
+lcov.info
+coverage/
+
+# OS and editor files
+.DS_Store
+.idea/
+.vscode/
+
+# Logs
+*.log
+
+# Node modules
+node_modules/

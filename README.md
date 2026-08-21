@@ -13,6 +13,19 @@ Status: deployed and source-verified on Robinhood Chain. This README describes b
 - Source commit deployed: `9c24bf3c547941d1006a6746b6c750be0f5b3cea`
 - Deployment record: `deployments/robinhood-mainnet.json`
 
+### WETH / USDG pool
+
+- Pool ID: `0x14f8cf472104b8823340025c004d022de12ab0e4d7e8112a6dc73c1979e044ad`
+- WETH: `0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73`
+- USDG: `0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168`
+- PoolKey fee: `0x800000` (dynamic)
+- Tick spacing: `1`
+- Effective LP fee override: `500` (0.05%)
+- Zia hook fee: `1` bp (0.01%)
+- Initial price: approximately `2,365.21739369 USDG/WETH`
+- State: initialized with zero liquidity
+- Pool record: `deployments/robinhood-mainnet-weth-usdg.json`
+
 ## Canonical dependency
 
 The deployment script only permits Robinhood Chain and hardcodes the canonical PoolManager:
@@ -159,6 +172,7 @@ test/utils/
 script/MineZiaFeeHookAddress.s.sol
 script/DeployZiaFeeHook.s.sol
 deployments/robinhood-mainnet.json
+deployments/robinhood-mainnet-weth-usdg.json
 DEPENDENCIES.md
 foundry.toml
 remappings.txt

@@ -1,0 +1,75 @@
+{
+  "network": {
+    "name": "Robinhood Chain",
+    "chainId": 4663,
+    "explorer": "https://robinhoodchain.blockscout.com"
+  },
+  "pool": {
+    "poolId": "0x14f8cf472104b8823340025c004d022de12ab0e4d7e8112a6dc73c1979e044ad",
+    "poolManager": "0x8366a39CC670B4001A1121B8F6A443A643e40951",
+    "currency0": {
+      "address": "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+      "name": "WETH",
+      "symbol": "WETH",
+      "decimals": 18
+    },
+    "currency1": {
+      "address": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+      "name": "Global Dollar",
+      "symbol": "USDG",
+      "decimals": 6
+    },
+    "fee": 8388608,
+    "feeHex": "0x800000",
+    "tickSpacing": 1,
+    "hooks": "0x64E9ae1066c47Ac4a3cc0a5bd7B135908590e088"
+  },
+  "initialization": {
+    "referenceV3Pool": "0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca",
+    "sqrtPriceX96": "3853142899828685757740519",
+    "tick": -198634,
+    "approximateUsdGPerWeth": "2365.21739369",
+    "transactionHash": "0xf39a71ee6c2a2a7330cd0e01afea13ca8d04053ac2fa1d8f6fa9d4108b6e7000",
+    "blockNumber": 42077180,
+    "blockHash": "0xdb636b0620d25f43f153620d18f99d9093c99f0970939379bc0b13b4f071dfc8",
+    "timestamp": "2026-08-21T06:46:17Z",
+    "deployer": "0x4e937Dfb5ef10e3640fC0cbD7dFcFe8155209742",
+    "gasUsed": 82658,
+    "effectiveGasPriceWei": 20034000,
+    "transactionCostWei": "1655970372000"
+  },
+  "feeConfiguration": {
+    "keeper": "0xe329342eFe03F928FE820C5039E1B0Ac7889631b",
+    "lpFee": {
+      "value": 500,
+      "percentage": "0.05%",
+      "transactionHash": "0x8e7581dfeac3eb5e3f3e93cd65ee0921961c1901b20a836442ed1f17bc834816",
+      "blockNumber": 42077209,
+      "blockHash": "0x839cc65535f713250e863ea1b48a12161402374258bc092e8846ee1412fd834f",
+      "timestamp": "2026-08-21T06:46:20Z",
+      "gasUsed": 29176,
+      "effectiveGasPriceWei": 20054000,
+      "transactionCostWei": "585095504000"
+    },
+    "hookFee": {
+      "valueBps": 1,
+      "percentage": "0.01%",
+      "transactionHash": "0xcd4bd87e1460f79d8fb0e13c7eae7b788c1c50406c420147d1bd2f93fcefa603",
+      "blockNumber": 42077242,
+      "blockHash": "0xcd4004d23eee607707811f50d6322c922b8a6b7d81281561cce341f1eb52aa31",
+      "timestamp": "2026-08-21T06:46:23Z",
+      "gasUsed": 29167,
+      "effectiveGasPriceWei": 20056000,
+      "transactionCostWei": "584973352000"
+    },
+    "nominalCombinedPercentage": "0.06%",
+    "ziaShareOfNominalCombinedFee": "1/6"
+  },
+  "verifiedState": {
+    "initialized": true,
+    "liquidity": "0",
+    "poolManagerStoredLpFee": 0,
+    "hookLpFeeOverride": 500,
+    "hookFeeBps": 1
+  }
+}
